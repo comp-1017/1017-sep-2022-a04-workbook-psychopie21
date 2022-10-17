@@ -1,137 +1,143 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <!-- 
-            this is a comment, it is not html code or content
-
-            title tag: this tag supplies the content for the browse tab
-            meta tag: serveral version and option on this tag
-                    : charset - specifies the set of character to be used by the web page
-                    : name= and content= - Name allow for a specific item, content is the content (text)
-        
-            the tag elements in the head area are not displayed on the web page, they are not
-            consider part of the page content, they are used by the internet and browser to 
-            manage the web page
-        -->
-        <title>Basic Html structure</title>
+        <title>on the page title tab</title>
         <meta charset="utf-8">
-        <meta name="author" content="Dare Koledoye"> 
+        <meta name="author" content="Dare Koledoye">
+        <!--
+            this structure is a comment block in html files
+            everything in this structure is NOT considered part of any
+                content of your web page
+
+            Most tag elements in html are done in pairs
+            These are called opening and closing pairs
+            There are some tags that are not in pairs and are referred
+                to as empty tags (a.k.a. void)
+            The openning tag indicates the start of your element
+                and the closing tag indicates the end of your element
+            The closing tag has the same name as the openning tag PLUS
+                a slash (/) preceeding the name
+
+            The head area of your web page is NOT considered content
+            The tags within the head are are used by the browser to
+                manage some display of the page, give additional documentation
+                to the page, indicate charactersets, help with search engines,
+                and many other assists.
+        -->
+        
     </head>
     <body>
         <!--
-            items in this area to indented for display (content) on the web page
-
-            header tag h1 thru h6 : these are titles, importance is 1 (greatest) 6 (least)
-
-            paragraph tag p: this tag indicates the content to be a paragraph
+            content within this area is expected to be displayed by the browser
         -->
 
+        <!-- title heading tags
+                these tags are referred to as hx tags
+                    where x is 1-6
+                importance is 1 high 6 low
+        -->
         <h1>Basic Html Tags</h1>
-        <h3>Paragraph tag</h3>
-        <p>This page demonstrates the basic structure of an html web page. The head area has the
-            the browse title tab specified as well as the charset defined. The body is demonstrating
-            the h1 header tag and the paragraph tag.
+        <h3>Paragraph Tag</h3>
+        <!--
+            This is the coding block for your content in a paragraph
+            The paragraph tag belongs to the "block" group of tags
+            A "block" group tag places your content on a neew line
+
+            You can place all your paragraph text content on one physical
+            line, however, that would require a lot of scrolling right and left.
+            You can have word wrap active in your editor and it will NOT affect
+            how the browser displayes your paragraph content. You can place
+            your context on separate lines yourself and it will NOT affect how
+            the browser displays your paragraph content.
+        -->
+        <p>The paragraph tag is a block tag. A block tage begins a new line when
+            the content is displayed by your browser. The browser does NOT display
+            your content in the physical style of how you have entered your code in
+            html file.
         </p>
-        <p>this is another paragraph</p>
-        <!-- 
+        <p>This is a second paragraph on the browser page. It will start a new line. 
+            Did the Go Live update the browser display of my saved changes to the file?
+        </p>
+        <!--
             if you wish to use a component of a reserved tag (or the whole tag)
-                you would be in trouble using the tag.
-            instead: you can use special character strings to represent
-                components of the tag sucha as the < (&lt;) and the > (&gt;)
-                symbols
+                you would be in trouble using the tag
+            instead: you can use special character strings to represent components
+                        of the tag such as < (&lt;) and the > (&gt;) symbols
         -->
         <h3>List tags: &lt;ol&gt; and &lt;ul&gt;</h3>
-        <!-- 
-            block tag , paired
-            create an ordered list (numbered) using <ol>
-            create an unordered list (bulleted) using <ul>
-            items in the list are indicated using the line item <li> 
+        <!-- block tag
+                create an ordered list (numbered) using <ol>
+                create an unordered list (bulleted) using <ul>
+                items in the list are indicated using the line item <li>
+                lists can be nested and mixed
         -->
+        <p>Add extension Live Server for Go Live execution within VSC</p>
         <ol>
-            <li>Add extension Live Server for Go Live execution from VSC</li>
-            <li>Open extensions using 5 icon on left by menu</li>
-            <li>either search for Live Server or select if seen in list</li>
-            <li>press install</li>
-            <li>To use
-                <ol>
-                    <li>open an html page</li>
-                    <li>Make any adjustments</li>
-                    <li>Save adjustments</li>
-                    <li>look to bottom right on blue status line for Go Live and press</li>
-                    <li>Make additional adjustments, save and return to browser to see updates</li>
-                </ol>
+            <li>Open VSC and select your extension icon</li>
+            <li>Select (if seen) or search for Live Server in the extension list</li>
+            <li>Press the install button</li>
+            <li>After the install, check blue bottom status line right corner for 
+                the button text Go Live
+            </lI>
+            <li>To use Go Live
+                <ul>
+                    <li>open an html file</li>
+                    <li>make any adjustments to your page</li>
+                    <li>save the changes</li>
+                    <li>press Go Live</li>
+                </ul>
             </li>
+
         </ol>
-        <ul>
-            <li>this is an unordered list</li>
-            <li>default display is a bulleted list</li>
-            <li>we will see later how to remove these bullets using css styling</li>
-        </ul>
 
-        <h3>Anchor tag (a.k.a. linking to another page)</h3>
-        <!-- blocked paired
-            This is an anchor tag and is incorrectly often referred to as the
-                link tag
-            One should NOT use the link tag because ther is actually a <link>
-                used in the ,head> section
-            The anchor tag can take you to a different location whether it
-                be on a different website, different page in the current web site
-                or a different location on the current page
-
+        <h3>Anchor tag (a.k.a. link to another page)</h3>
+        <!--
+            This is an anchor tag and is often incorrectly referred to as
+                a link tag
+            One should NOT use the phrase link tag because there is 
+                actually a <link> tag used in the <head> area
+            The anchor tag can take you to
+               - a different web site
+               - a different web page within the same web site
+               - a different location of the same web page
+            
             parameters:
             href: points to the desired location
-            target: indicates the browser page display option
-                    default is same display page tab
-                    _blank will open a new browser tab (page)
+            target: optional
+                    default is same browser display page
+                    _blank will open the destination in a new browser tab (page)
         -->
         <a href="https://www.nait.ca" target="_blank">go to Nait</a>
 
         <h3>Image tag</h3>
-        <!--an empty (void) tag 
-            image tag does not have a closing tag
-            the image tag has no content, however is does have parameters
+        <!--
+            Empty (void) tag
+            The image tag does not have a closing tag because there is
+                no content to display
+            parameters:
+                src="relative web site location"
+                alt="printable text if image is not found on file"
+                [title="tool tip text for the image"]
 
-            parameters
-            src="relative web site location"
-            alt="printable text if the image is not found at src"
-            [title="tool tip text for the image"]
+            The relative path is from the top of your web site
+                down/up to the file/page you desire to reference
 
-            Absolute Addressing is a complete fixed file path
-                drive:/folder/..../folder/filename.ext
+            Down: include all subfolder names and the final file name
+                sf1/sf2/..../fn
 
-            relative address begins at a specific point
-            for web sites, it is the "top of the web site"
-            reference to the desired filename is done by specifying
-                the appropriate folder path to the desired file
-            NO DRIVE
-
-            Movement with a relative address
-            - if only the filename is given, the location is within the
-                same folder
-            - movement down the file structure is by /foldername
-            - movement up the file structure is by using .. for each
-                folder level to ascend
-
-            same folder
-             ="filename.ext"
-
-            lower folder
-             ="nextleveldownfoldername/nextleveldownfoldername/.../filename.ext"
-
-            from one lower folder to another lower folder on a different branch
-            .. for each level that needs to be ascended
-             ="../../../nextleveldownfoldername/filename.ext"
+            up: use the string .. to do up a level (subfolder)
+                ../../sf1/fn
         -->
-        <img src="img/photoshop.png" alt="logo photoshop"
-            title="a logo image of Photoshop">
+        <img src="img/photoshop.png" alt="photoshop logo"
+                title="the Adobe photoshop logo">
 
         <!--
-            combine the anchor tag and the image tag as the anchor tag content
-            
+            can i use an image as the link to the www.adobe.com page?
         -->
-        <a href="http://www.adobe.com" target="_blank">
-            <img src="img/photoshop.png" alt="logo photoshop"
-            title="a logo image of Photoshop" style="width:80px; height:80px;">
+        <a href="https://www.adobe.com" target="_blank">
+            <img src="img/photoshop.png" alt="photoshop logo"
+            title="go to Adobe web site"
+            style="width:80px; height:80px;"> 
         </a>
     </body>
 </html>

@@ -1,0 +1,154 @@
+/*********************************************
+different types of syntax for selectors
+
+element selector
+
+*********************************************/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*********************************************
+
+multiple element selectors
+if you have the same rules for multiple element
+    selector, you may group the selectors as
+    a comma separate list
+the group may be coded on one physical line or
+    over multiple lines
+
+*********************************************/
+
+h1, h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/*********************************************
+
+if you repeat the element selector in your css
+    file, any additional rules are combined with
+    previously specified rules.
+if you re-code a previously specified rule, then
+    the new rule overrides the previous rule
+
+    "Last rule wins"
+
+*********************************************/
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #111;
+}
+
+/*********************************************
+
+decendant selectors
+
+a decendant selector is a set of element selectors
+    used in your html, follow immediately, one
+    after another
+
+the decendant selector has 2 or more element selectors
+
+this can be use to isolate a particular selector
+    from other occurances of the same selector
+    on the page.
+
+*********************************************/
+
+footer ul{
+    background-color: #550000;
+}
+
+footer{
+    padding: 48px;
+    background-color: #dedede;
+    border: 1px solid red;
+}
+
+/*********************************************
+
+child selectors
+
+a child selector is a set of element selectors
+    used in your html, follow one
+    after another
+
+the selector order is "parent" through "child"
+
+this can be use to isolate a particular selector
+    from other occurances of the same selector
+    on the page.
+
+*********************************************/
+
+main p{
+    font-style: italic;
+} 
+
+h1{
+    padding: 48px;
+    color: #696969;
+    border-bottom: 1px solid #dedede;
+}
+
+section{
+    font-family: Arial;
+    width: 800px;
+    margin: 48px;
+
+}
+
+/*********************************************
+
+class selectors
+
+types: user (targetted) class
+       psuedo classes, these are attached to elements
+
+a user class is a user-defined name
+syntax: .user-name {rules}
+on html: a class is specified within a html tag
+syntax: <tag class="user-name">
+
+you can have multiple classes on one html tag
+NOTE the list DOES NOT use a separating comma
+syntax: <tag class="user-name1 user-name2 ..."
+
+*********************************************/
+
+.menu-items {
+    font-family: courier, sans-serif;
+    list-style-type: none; 
+    width: 600px;
+    padding:24px;
+    border-left: 5px solid red;
+    background-color: #f4f4f4;
+    margin-left: 24px;
+}
+
+/*******************************************************
+
+not all html element have pre-code psuedo classes
+the anchor tag has 4 pre-coded psuedo classes
+The order in which the anchor tag psuedo classes are
+    specified within your css is important
+When you override the psuedo class, you are overriding
+    the defaults of the class
+order:
+a:link unused anchor link
+a:hover used when your cursor hovers over the anchor
+a:visited used after you have gone to the anchor link
+a:active used when you are clicking the anchor link
+
+*****************************************************/
+
+footer a:hover{
+    font-size: larger;
+    color: yellow;
+}
