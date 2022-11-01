@@ -125,7 +125,7 @@ page = lm + lb + lb + content + rp + rb + rm + remainder
 ***************************************************************/
 .black-paint{
     height:50px;
-    width: 900px;
+    width: 3000px;
     background-color: black;
     margin: 30px 0 30px 30px;
 }
