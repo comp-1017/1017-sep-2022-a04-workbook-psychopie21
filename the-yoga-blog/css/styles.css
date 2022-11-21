@@ -7,5 +7,61 @@ body {
 	width: 960px;
 	font-size: 100%;
 	line-height: 1.5;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
 }
 
+.page-header{
+	background: url(../img/header-background.png) repeat-x;
+}
+
+.hidden{
+	display: none;
+}
+
+h2,
+h3,
+footer p{
+	color: #0b777b;
+	font-weight: bold;
+}
+
+section > p{
+	color: #7f8c8c;
+}
+
+h2{
+	font-size:36px;
+}
+
+h3{
+	font-size: 27px;
+}
+
+section{
+	margin-top: 70px;
+}
+
+section footer img{
+	vertical-align: middle;
+}
+
+section footer{
+	margin-top: 24px;
+}
+
+section footer span{
+	margin: 0 24px;
+}
+
+footer img{
+ margin:0 5px;
+}
+
+strong{
+	font-weight: bold;
+}
+
+.footer-margin{
+	margin-top: 100px;
+}
