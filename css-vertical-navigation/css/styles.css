@@ -1,0 +1,91 @@
+body {
+	background-color: white;
+}
+ 
+.container {
+	margin:0 auto;
+	width:960px;
+	font-size: 100%;
+	line-height: 1.5;
+	
+}
+
+header{
+	height:70px;
+	 background-color: #fff;
+	border-bottom: 1px solid #959372;
+	
+}
+
+header h1{
+	display: none;
+}
+
+/* when you use a class, you can assign the class to any
+   number of element tags in your html unlike using
+   element selectors which are specific to that selector
+.hidden{
+	display: none;
+}
+*/
+
+header > img {
+	margin: 8px;
+}
+
+/* to apply the pattern background
+   step 1: place the nav in a div and style the div
+   step 2: apply the background
+   step 3: give a phyiscal block height to area
+   step 4: remove the margin in banner class and add a padding in here (moving the inside of banner)  */
+.navbanner{
+	background: url(../img/pattern-bg.gif) repeat;
+	height: 690px;
+	padding-top:60px;
+}
+
+/* style the banner 
+	move the banner down by using the margin-top
+	added the background image which has NO effect on phyiscal content size
+	adjusted height (content height) to image size
+	added padding (caused problem with image, beginning to repeat image)
+	adjusted height (content height) to account for the add padding
+*/
+.banner{
+	 /* margin-top: 60px;  */
+	background-image: url(../img/flower-banner.jpg);
+	height: 420px; /* this is for the content area NOT the image 480 - 60 =420 */
+	padding: 60px 0 0 680px;
+}
+
+.banner h2{
+	font-family: 'Alegreya', serif;
+	font-size: 36px; /*seems that the pt on PS is equal to the desired px in styling */
+	color: #f9ea4f;
+	font-style: italic;
+}
+
+/* handle the anchor elements for the menu */
+
+.banner a{
+	color: #faf9f8;
+	font-size: 18px;
+	text-decoration: none; /* remove the underline on an anchor tag */
+}
+
+/* use the hover psuedo class of the anchor tag to alter the color
+    of the anchor tag text when the cursor is moved over the anchor tag
+   this will draw the user attention to the link  
+   
+ 	:visited if the link has been used
+	:active if the link is clicked
+ */
+.banner a:hover{
+	color:#f9ea4f;
+}
+
+/* instead of using margin to separate the li items, you can use
+     the rule line-height*/
+.banner li{
+	line-height: 40px; 
+}
